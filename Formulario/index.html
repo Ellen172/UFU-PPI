@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="buscaProduto.php" method="get">
+        <!--ACTION: pra onde o formulario será enviado-->
+        <!--METHOD: metodo de envio (get:enviado pela URL[form pequeno e sem informações sigilosas]; post:enviados como parte do corpo da requisição http[form maior, com dados sensiveis])-->
+        
+        <div>
+            <label for="produto">Produto:</label>
+            <!--for: vinculado ao id do input, define a que entrada o label se refere-->
+            <input type="text" id="produto" name="produto" value="arroz">
+            <!--type: define o tipo de input-->
+            <!--name: fornece o nome de identificação no envio do formulario-->
+            <!--value: valor inicializado no input-->
+        </div>
+
+        <button>Buscar</button>
+    
+    </form>
+    <br> <hr> <br> 
+    <form action="login.php" method="post" enctype="multipart/form-data">
+        <!--enctype: só pode ser usado no method post. -->
+        <!--"application/x-www-form-urlencoded" : modo padrão, são enviados de forma comum-->
+        <!--"multipart/form-data" : enviado com encriptação-->
+        <!--"text/plain" : modo textual simples-->
+        <div>
+            <label for="usuario">Usuário: </label>
+            <input type="text" id="usuario" name="usuario"
+                placeholder="Informe o usuario" autocomplete="off">
+                <!--placeholder: o que ficará escrito na caixa do input até que seja inserido algo-->
+                <!--autocomplete: define se poderá ser autocompletado pelo navegador-->
+        </div>
+        <div>
+            <label for="senha">Senha: </label>
+            <input type="password" id="senha" name="senha">
+        </div>
+
+        <button>Enviar</button>
+        <input type="submit" value="Enviar">
+        <!--type="subimt" : redundancia-->
+        <!--type="button" : define um botão qualquer de uso geral-->
+        <input type="reset" value="Limpar">
+    </form>
+    <br> <hr> <br> 
+    <form action="radio.php" method="get">
+        <div>
+            <label for="estadoCivil">Selecione o estado civil: </label>
+        </div>
+        <div>
+            <input type="radio" id="estadoCivil" name="estadoCivil" value="solteiro" checked>Solteiro
+            <input type="radio" id="estadoCivil" name="estadoCivil" value="casado" checked>Casado
+            <input type="radio" id="estadoCivil" name="estadoCivil" value="divorciado" checked>Divorciado
+        </div>
+        <br>
+        <fieldset>
+            <legend>Selecione os seus esportes de interesse:</legend>
+            <div>
+                <input type="checkbox" name="esportes[]" value="natacao">
+                <label for="natacao">Natação</label>
+                <input type="checkbox" name="esportes[]" value="futebol">
+                <label for="futebol">Futebol</label>
+                <input type="checkbox" name="esportes[]" value="karate">
+                <label for="karate">Karate</label>
+                <input type="checkbox" name="esportes[]" value="atletismo">
+                <label for="atletismo">Atletismo</label>
+            </div>
+        </fieldset> <!--cria o quadro em volta-->
+        <input type="submit" value="Enviar">
+    </form>
+    <br> <hr> <br> 
+    <form action="date.php" method="get">
+        <div>
+            <input type="date"> 
+            <input type="time">
+            <input type="datetime-local">
+        </div>
+    </form>
+</body>
+</html>
