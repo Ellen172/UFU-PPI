@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Voltar a Página Principal</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form action="contato.php" method="post">
+            <h2>Dados Pessoais</h2>
+            <div>
+                <label for="nome">Nome: </label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="idade">Idade: </label>
+                <input type="number" id="idade" name="idade" required>
+            </div>
+            <div>
+                <label for="telefone">Telefone: </label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+            <div>
+                <label for="dataNascimento">Data de Nascimento: </label>
+                <input type="date" id="dataNascimento" name="dataNascimento">
+            </div>
+            <div>
+                <label for="sexo">Sexo: </label>
+                <input type="radio" id="sexo" name="sexo" value="feminino">Feminino 
+                <input type="radio" id="sexo" name="sexo" value="masculino">Masculino 
+                <input type="radio" id="sexo" name="sexo" value="outro">Outro 
+            </div>
+            <div>
+                <label for="estadoCivil">Estado civil: </label>
+                <input type="radio" id="estadoCivil" name="estadoCivil" value="solteiro" checked>Solteiro
+                <input type="radio" id="estadoCivil" name="estadoCivil" value="casado" checked>Casado
+                <input type="radio" id="estadoCivil" name="estadoCivil" value="divorciado" checked>Divorciado
+            </div>
+            <h2>Dados da Empresa</h2>
+            <div>
+                <label for="cnpj">Cnpj: </label>
+                <input type="text" id="cnpj" name="cnpj" placeholder="Insira sem pontos ou traços">
+            </div>
+            <div>
+                <label for="razaoSocial">Razão Social: </label>
+                <input type="text" id="razaoSocial" name="razaoSocial">
+            </div>
+            <div>
+                <label for="ramoAtuacao">Ramo de Atuação: </label>
+                <input type="checkbox" id="ramoAtuacao" name="ramoAtuacao[]" value="industria">
+                <label for="industria">Industria</label>
+                <input type="checkbox" id="ramoAtuacao" name="ramoAtuacao[]" value="comercio">
+                <label for="comercio">Comercio</label>
+                <input type="checkbox" id="ramoAtuacao" name="ramoAtuacao[]" value="servicos">
+                <label for="servicos">Serviços</label>
+            </div>
+            <h2>Endereço</h2>
+            <div>
+                <label for="cep">Cep: </label>
+                <input text="number" placeholder="apenas numeros" id="cep" name="cep">
+            </div>
+            <div>
+                <label for="tipoLogradouro">Tipo de Logradouro: </label>
+                <select name="tipoLogradouro" id="tipoLogradouro">
+                    <option value="aeroporto">aeroporto</option>
+                    <option value="alameda">alameda</option>                    
+                    <option value="área">área</option>
+                    <option value="avenida">avenida</option>
+                    <option value="campo">campo</option>
+                    <option value="chácara">chácara</option>
+                    <option value="colônia">colônia</option>
+                    <option value="condomínio">condomínio</option> 
+                    <option value="conjunto">conjunto</option>
+                    <option value="distrito">distrito</option>
+                    <option value="esplanada">esplanada</option>
+                    <option value="estação">estação</option>
+                    <option value="estrada">estrada</option>
+                    <option value="favela">favela</option>
+                    <option value="fazenda">fazenda</option>
+                    <option value="feira">feira</option>
+                    <option value="jardim">jardim</option>
+                    <option value="ladeira">ladeira</option>
+                    <option value="lago">lago</option>
+                    <option value="lagoa">lagoa</option>
+                    <option value="largo">largo</option>
+                    <option value="loteamento">loteamento</option>
+                    <option value="morro">morro</option>
+                    <option value="núcleo">núcleo</option>
+                    <option value="parque">parque</option>
+                    <option value="passarela">passarela</option>
+                    <option value="pátio">pátio</option>
+                    <option value="praça">praça</option>
+                    <option value="quadra">quadra</option>
+                    <option value="recanto">recanto</option>
+                    <option value="residencial">residencial</option>
+                    <option value="rodovia">rodovia</option>
+                    <option value="rua">rua</option>
+                    <option value="setor">setor</option>
+                    <option value="sítio">sítio</option>
+                    <option value="travessa">travessa</option>
+                    <option value="trecho">trecho</option>
+                    <option value="trevo">trevo</option>
+                    <option value="vale">vale</option>
+                    <option value="vereda">vereda</option>
+                    <option value="via">via</option>
+                    <option value="viaduto">viaduto</option>
+                    <option value="viela">viela</option>
+                    <option value="vila">vila</option>
+                </select>
+            </div>
+            <div>
+                <label for="logradouro">Logradouro: </label>
+                <input type="text" id="logradouro" name="logradouro">
+            </div>
+            <div>
+                <label for="cidade">Cidade: </label>
+                <input type="text" id="cidade" name="cidade">
+            </div>
+            <div>
+                <label for="estado">Estado: </label>
+                <input type="text" id="estado" name="estado">
+            </div>
+            <h2>Descrição do Interesse</h2>
+            <div>
+                <textarea name="descricao-interesse" rows="5" cols="100"></textarea>
+            </div>
+            <h2>Outro</h2>
+            <div></div>
+        </form>
+    </main>
+</body>
+</html>
