@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario</h1>
+        <hr>
+    </header> 
+    <nav>
+        <ul>
+            <li><a href="index.html">Principal</a></li>
+            <li><a href="types.html">Tipos de Input</a></li>
+            <li><a href="selecionaveis.html">Selecionaveis</a> </li>
+            <li><a href="data-cor-arquivo.html">Data-Cor-Arquivo</a> </li>
+        </ul>
+        <hr>
+    </nav>
+    <main>
+        <form action="extras.php" method="post" enctype="multipart/form-data">
+            <div>
+                <!--pode-se utilizar os atributos min e max nos elementos data-->
+                <label for="data">Data: </label>
+                <input type="date" id="data">
+                <br> <br>
+                <label for="hora">Hora: </label> 
+                <input type="time" id="hora">
+                <br> <br>
+                <label for="dataHora">Data/hora: </label>
+                <input type="datetime-local" id="dataHora">
+                <br> <br>
+                <label for="mes">Mês: </label>
+                <input type="month" id="mes">
+                <br> <br>
+                <label for="semana">Semana: </label>
+                <input type="week" id="semana">
+            </div>
+            <br>
+            <div>
+                <label for="cor">Escolha a cor: </label>
+                <input type="color" id="cor" name="cor">
+            </div>
+            <br>
+            <div>
+                <label for="arquivo">Insira o arquivo: </label>
+                <input type="file" id="arquivo" name="arquivo"> <!--enctype precisa ser multipart/form-data-->
+                <!--Atributos-->
+                    <!--multiple: varios arquivos-->
+                    <!--accept: quais arquivos serão aceitos-->
+                    <!--capture: captura com camera ou microfone (não é muito compativel)-->
+                    <!--files: resgata informações dos arquivos selecionados-->
+            </div>
+            <br>
+            <button>Enviar</button>
+        </form>
+    </main>
+</body>
+</html>

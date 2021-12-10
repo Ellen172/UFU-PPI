@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario</h1>
+        <hr>
+    </header> 
+    <nav>
+        <ul>
+            <li><a href="index.html">Principal</a></li>
+            <li><a href="types.html">Tipos de Input</a></li>
+            <li><a href="selecionaveis.html">Selecionaveis</a> </li>
+            <li><a href="data-cor-arquivo.html">Data-Cor-Arquivo</a> </li>
+        </ul>
+        <hr>
+    </nav>
+    <main>
+        <form action="radio.php" method="get">
+            <div>
+                <label for="estadoCivil">Selecione o estado civil: </label>
+                <input type="radio" id="estadoCivil" name="estadoCivil" value="solteiro" checked>Solteiro
+                <input type="radio" id="estadoCivil" name="estadoCivil" value="casado" checked>Casado
+                <input type="radio" id="estadoCivil" name="estadoCivil" value="divorciado" checked>Divorciado
+            </div>
+            <br>
+            <fieldset>
+                <legend>Selecione os seus esportes de interesse:</legend>
+                <div>
+                    <input type="checkbox" name="esportes[]" value="natacao">
+                    <label for="natacao">Natação</label>
+                    <input type="checkbox" name="esportes[]" value="futebol">
+                    <label for="futebol">Futebol</label>
+                    <input type="checkbox" name="esportes[]" value="karate">
+                    <label for="karate">Karate</label>
+                    <input type="checkbox" name="esportes[]" value="atletismo">
+                    <label for="atletismo">Atletismo</label>
+                </div>
+            </fieldset> <!--cria o quadro em volta-->
+            <br>
+            <div>
+                <label for="estado">Escolha o estado: </label>
+                <select name="estado" id="estado">
+                    <option value="AM">Amazonas</option>
+                    <option value="BA" selected>Bahia</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <!--envia no form o value-->
+                    <!--o atributo multiple pode ser usado para permitir a seleção de mais de uma option-->
+                </select>
+            </div>
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+</body>
+</html>

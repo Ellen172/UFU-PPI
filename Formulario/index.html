@@ -5,79 +5,45 @@
     <title>Formulario</title>
 </head>
 <body>
-    <form action="buscaProduto.php" method="get">
-        <!--ACTION: pra onde o formulario será enviado-->
-        <!--METHOD: metodo de envio (get:enviado pela URL[form pequeno e sem informações sigilosas]; post:enviados como parte do corpo da requisição http[form maior, com dados sensiveis])-->
-        
-        <div>
-            <label for="produto">Produto:</label>
-            <!--for: vinculado ao id do input, define a que entrada o label se refere-->
-            <input type="text" id="produto" name="produto" value="arroz">
-            <!--type: define o tipo de input-->
-            <!--name: fornece o nome de identificação no envio do formulario-->
-            <!--value: valor inicializado no input-->
-        </div>
-
-        <button>Buscar</button>
-    
-    </form>
-    <br> <hr> <br> 
-    <form action="login.php" method="post" enctype="multipart/form-data">
-        <!--enctype: só pode ser usado no method post. -->
-        <!--"application/x-www-form-urlencoded" : modo padrão, são enviados de forma comum-->
-        <!--"multipart/form-data" : enviado com encriptação-->
-        <!--"text/plain" : modo textual simples-->
-        <div>
-            <label for="usuario">Usuário: </label>
-            <input type="text" id="usuario" name="usuario"
-                placeholder="Informe o usuario" autocomplete="off">
-                <!--placeholder: o que ficará escrito na caixa do input até que seja inserido algo-->
-                <!--autocomplete: define se poderá ser autocompletado pelo navegador-->
-        </div>
-        <div>
-            <label for="senha">Senha: </label>
-            <input type="password" id="senha" name="senha">
-        </div>
-
-        <button>Enviar</button>
-        <input type="submit" value="Enviar">
-        <!--type="subimt" : redundancia-->
-        <!--type="button" : define um botão qualquer de uso geral-->
-        <input type="reset" value="Limpar">
-    </form>
-    <br> <hr> <br> 
-    <form action="radio.php" method="get">
-        <div>
-            <label for="estadoCivil">Selecione o estado civil: </label>
-        </div>
-        <div>
-            <input type="radio" id="estadoCivil" name="estadoCivil" value="solteiro" checked>Solteiro
-            <input type="radio" id="estadoCivil" name="estadoCivil" value="casado" checked>Casado
-            <input type="radio" id="estadoCivil" name="estadoCivil" value="divorciado" checked>Divorciado
-        </div>
-        <br>
-        <fieldset>
-            <legend>Selecione os seus esportes de interesse:</legend>
+    <header>
+        <h1>Formulario</h1>
+        <hr>
+    </header> 
+    <nav>
+        <ul>
+            <li><a href="index.html">Principal</a></li>
+            <li><a href="types.html">Tipos de Input</a></li>
+            <li><a href="selecionaveis.html">Selecionaveis</a> </li>
+            <li><a href="data-cor-arquivo.html">Data-Cor-Arquivo</a> </li>
+        </ul>
+        <hr>
+    </nav>
+    <main>
+        <form action="buscaProduto.php" method="get">
+            <!--ACTION: pra onde o formulario será enviado-->
+            <!--METHOD: metodo de envio (get:enviado pela URL[form pequeno e sem informações sigilosas]; post:enviados como parte do corpo da requisição http[form maior, com dados sensiveis])-->
+            
             <div>
-                <input type="checkbox" name="esportes[]" value="natacao">
-                <label for="natacao">Natação</label>
-                <input type="checkbox" name="esportes[]" value="futebol">
-                <label for="futebol">Futebol</label>
-                <input type="checkbox" name="esportes[]" value="karate">
-                <label for="karate">Karate</label>
-                <input type="checkbox" name="esportes[]" value="atletismo">
-                <label for="atletismo">Atletismo</label>
+                <label for="produto">Produto:</label>
+                <!--for: vinculado ao id do input, define a que entrada o label se refere-->
+                <input type="text" id="produto" name="produto" value="arroz">
+                <!--type: define o tipo de input-->
+                <!--name: fornece o nome de identificação no envio do formulario-->
+                <!--value: valor inicializado no input-->
             </div>
-        </fieldset> <!--cria o quadro em volta-->
-        <input type="submit" value="Enviar">
-    </form>
-    <br> <hr> <br> 
-    <form action="date.php" method="get">
-        <div>
-            <input type="date"> 
-            <input type="time">
-            <input type="datetime-local">
-        </div>
-    </form>
+            <br>
+            <button>Buscar</button>
+        
+        </form>
+    </main>
+    <!--Mais alguns atributos para o form-->
+        <!--autofocus: ao ser carregado o campo recebe o foco-->
+        <!--readonly: apenas de leitura, envia seu valor-->
+        <!--disabled: desabilita o campo para o usuario, não conseguirá interagir, não envia seu valor-->
+        <!--required: preenchimento obrigatorio-->
+        <!--pattern: define os valores permitidos-->
+        <!--minlength: qtd minima de caracteres aceitos-->
+        <!--maxlength: qtd maxima de caracteres aceitos-->
+        <!--size: largura no input, altura no select-->
 </body>
 </html>

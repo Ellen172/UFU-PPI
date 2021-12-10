@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario</h1>
+        <hr>
+    </header> 
+    <nav>
+        <ul>
+            <li><a href="index.html">Principal</a></li>
+            <li><a href="types.html">Tipos de Input</a></li>
+            <li><a href="selecionaveis.html">Selecionaveis</a> </li>
+            <li><a href="data-cor-arquivo.html">Data-Cor-Arquivo</a> </li>
+        </ul>
+        <hr>
+    </nav>
+    <main>
+        <form action="login.php" method="post" enctype="multipart/form-data">
+            <!--enctype: só pode ser usado no method post. -->
+            <!--valores: -->
+                <!--"application/x-www-form-urlencoded" : modo padrão, são enviados de forma comum-->
+                <!--"multipart/form-data" : enviado com encriptação-->
+                <!--"text/plain" : modo textual simples-->
+
+            <div>
+                <label for="usuario">Usuário: </label>
+                <input type="text" id="usuario" name="usuario"
+                    placeholder="Informe o usuario" autocomplete="off">
+                    <!--placeholder: o que ficará escrito na caixa do input até que seja inserido algo-->
+                    <!--autocomplete: define se poderá ser autocompletado pelo navegador-->
+            </div>
+            <br>
+            <div>
+                <label for="senha">Senha: </label>
+                <input type="password" id="senha" name="senha">
+            </div>
+            <br>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email"> <!--aceita apenas com o @-->
+            </div>
+            <br>
+            <div>
+                <label for="telefone">Telefone: </label>
+                <input type="tel" id="telefone" name="telefone"> <!--aparece o teclado numerico no telefone-->
+            </div>
+            <br>
+            <div>
+                <label for="numero">Insira o numero: </label>
+                <input type="number" id="numero" name="numero">
+            </div>
+            <br>
+            <div>
+                <label for="range">Insira sua avaliação: </label>
+                <input type="range" id="range" name="range"> <!--varia por padrão de 0 a 100-->
+            </div>
+            <br>
+            <div>
+                <input type="hidden" name="campoOculto" value="test"> <!--não aparece no form final, serve para controle-->
+            </div>
+            <br>
+            <div>
+                <textarea name="texto" rows="10" cols="50">Seu texto aqui!!</textarea>
+                <!--maxlength: limita os caracteres-->
+            </div>
+            <br>
+            <button>Enviar</button>
+            <!--type="subimt" : redundancia-->
+            <!--type="button" : define um botão qualquer de uso geral-->
+            <br> <br>
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+</body>
+</html>
