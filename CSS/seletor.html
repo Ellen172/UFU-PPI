@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        h1 {
+            /* seletor de elemento */
+            font-size: 25pt;
+        }
+        #par1 { 
+            /* id de p */
+            color: red;
+        }
+        li > a {
+            /* a filho de li */
+            text-transform: uppercase;
+        }
+        div a {
+            /* todo a descendente de div */
+            color: green;
+        }
+        h2 + p {
+            color: blue;
+        }
+        h3 ~ p {
+            color: yellow;
+            background-color: gray;
+        }
+    </style>
+    <title>Seletores</title>
+</head>
+<body>
+    <section>
+        <h1>Seletor de ID</h1>
+        <p id="par1">Parágrafo afetado</p>
+        <p>Parágrafo não afetado</p>
+    </section>
+    <section>
+        <h1>Seletor filho</h1>
+        <a href="#">Link1</a>
+        <ul>
+            <li><a href="#">Link2</a> </li>
+            <li><a href="#">Link3</a> </li>
+        </ul>
+    </section>
+    <section>
+        <h1>Seletor descendente</h1>
+        <a href="#">Link 1</a>
+        <div>
+            <a href="#">Link 2</a>
+            <p><a href="#">Link 3</a></p>
+        </div>
+    </section>
+    <section>
+        <h1>Seletor de irmão adjacente</h1>
+        <h2>Titulo 1</h2>
+        <p>Paragrafo 1</p>
+        <p>Paragrafo 2</p>
+        <h2>Titulo 2</h2>
+        <p>Paragrafo 3</p>
+        <p>Paragrafo 4</p>
+    </section>
+    <section>
+        <h1>Seletor de irmão geral</h1>
+        <h3>Title</h3>
+        <p>Paragrafo 1</p>
+        <p>Paragrafo 2</p>
+        <h4>Subtitle</h4>
+        <p>Paragrafo 3</p>
+        <p>Paragrafo 4</p>
+    </section>
+</body>
+</html>

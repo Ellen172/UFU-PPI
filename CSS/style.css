@@ -1,0 +1,14 @@
+
+body {
+    background-color: bisque;
+}
+
+h1, h2, h3 { 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkblue;
+}
+
+p {
+    font-size: 14pt;
+    color: darkgreen;
+}
