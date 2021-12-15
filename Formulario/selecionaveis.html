@@ -19,27 +19,42 @@
         <hr>
     </nav>
     <main>
-        <form action="radio.php" method="get">
-            <div>
-                <label for="estadoCivil">Selecione o estado civil: </label>
-                <input type="radio" id="estadoCivil" name="estadoCivil" value="solteiro" checked>Solteiro
-                <input type="radio" id="estadoCivil" name="estadoCivil" value="casado" checked>Casado
-                <input type="radio" id="estadoCivil" name="estadoCivil" value="divorciado" checked>Divorciado
-            </div>
+        <form action="selecionaveis.php" method="get">
+            <fieldset> <!--cria um quadro em volta - agrupa os elementos selecionaveis -->
+                <legend>Selecione o estado civil: </legend>
+                <div>
+                    <input type="radio" id="estadoCivil" name="estadoCivil" value="solteiro" checked>
+                    <label for="solteiro">Solteiro</label>
+                </div>
+                <div>
+                    <input type="radio" id="estadoCivil" name="estadoCivil" value="casado">
+                    <label for="casado">Casado</label>
+                </div>
+                <div>
+                    <input type="radio" id="estadoCivil" name="estadoCivil" value="divorciado">
+                    <label for="divorciado">Divorciado</label>
+                </div>
+            </fieldset>
             <br>
             <fieldset>
                 <legend>Selecione os seus esportes de interesse:</legend>
                 <div>
                     <input type="checkbox" name="esportes[]" value="natacao">
                     <label for="natacao">Natação</label>
+                </div>
+                <div>
                     <input type="checkbox" name="esportes[]" value="futebol">
                     <label for="futebol">Futebol</label>
+                </div>
+                <div>
                     <input type="checkbox" name="esportes[]" value="karate">
                     <label for="karate">Karate</label>
+                </div>
+                <div>
                     <input type="checkbox" name="esportes[]" value="atletismo">
                     <label for="atletismo">Atletismo</label>
                 </div>
-            </fieldset> <!--cria o quadro em volta-->
+            </fieldset> 
             <br>
             <div>
                 <label for="estado">Escolha o estado: </label>
