@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tamanho de Fonte</title>
+    <style>
+        html {
+            font-size: 14px;
+        }
+        .medio {
+            font-size: 16px;
+        }
+        .dobro {
+            font-size: 2em;
+        }
+        .grande {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <section id="em"> 
+        <div class="medio">
+            <p>Texto 16px</p>
+            <div class="dobro">
+                <p>Texto 32px</p>
+                <div class="dobro">
+                    <p>Texto 64px</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="rem">
+        <p>Texto 14px</p>
+        <div class="medio">
+            <p>Texto 16px</p>
+            <div class="grande">
+                <p>Texto 28px</p>
+                <div class="grande">
+                    <p>Texto 28px</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
