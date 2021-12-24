@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Visibility</title>
+    <style>
+        article {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: x-large;
+            line-height: 1.5em;
+            display: inline-block;
+
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            padding: 5px 15px;
+
+            border: 1px solid lightgrey;
+            background-color: #f5f5f5;
+            box-shadow: 0px 0px 4px rgb(110, 187, 212);
+        }
+        .oculto {
+            display: none;
+        }
+        .escondido {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <article>A</article>
+    <article class="oculto">B</article>
+    <article>C</article>
+    <article class="escondido">D</article>
+    <article>E</article>
+</body>
+</html>
