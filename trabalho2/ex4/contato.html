@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+        .menuPaginas {
+            margin: 0;
+            padding: 5px;
+            text-align: left;
+        }
+        .menuPaginas > li {
+            margin: 10px;
+            padding: 0;
+            display: inline-block;
+        }
+        .menuPaginas li > a:link, a:visited {
+            padding: 10px 30px;
+            background-color: rgb(60, 104, 39);
+            color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1rem;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 15px;
+        }
+        .menuPaginas li > a:hover, a:active {
+            background-color: white;
+            color: rgb(60, 104, 39);
+            border: 1px solid rgb(60, 104, 39);
+        }
+        h2 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 2rem;
+            text-align: center;
+            background-color: rgb(128, 172, 108);
+            padding: 5px;
+        }
+        label {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.05em;
+            margin: 3px;
+            display: block;
+        }
+        .texto{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1rem;
+            width: 90%;
+        }
+        .dados {
+            width: 95%;
+            padding: 10px;
+            margin: 0 auto;
+            display: block;
+        }
+        .dados div {
+            display: inline-block;
+            width: 48%;
+            margin: 5px 5px 5px 0;
+        }
+        #selecao {
+            display: block;
+            width: 80%;  
+            margin: 10px auto;    
+        }
+        #selecao div {
+            display: inline-block;
+            width: max-content;
+            margin: 0 15px;
+        }
+        #selecao label,  #selecao input {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            display: inline;
+            margin: 0;
+            padding: 0;
+        } 
+        button, input[type="reset"] {
+            padding: 10px 50px;
+            background-color: rgb(128, 172, 108);
+            margin: 20px;
+            color: black;
+            border: 1px solid black; 
+            border-radius: 15px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        button:hover, button:active, input[type="reset"]:hover, input[type="reset"]:active {
+            background-color: white;
+            color: rgb(60, 104, 39);
+            border: 1px solid rgb(60, 104, 39);
+        }
+        .botoes {
+            display: inline-block;
+            width: 100%;
+            margin: 0 auto;
+            text-align: end;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menuPaginas">
+            <li><a href="index.html">Voltar a Página Principal</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form action="contato.php" method="post">
+            <h2>Dados Pessoais</h2>
+            <section class="dados">
+                <div>
+                    <label for="nome">Nome: </label>
+                    <input type="text" id="nome" name="nome" required class="texto">
+                </div>
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" required class="texto">
+                </div>
+                <div>
+                    <div>
+                        <label for="idade">Idade: </label>
+                        <input type="number" id="idade" name="idade" class="texto" required>
+                    </div>
+                    <div>
+                        <label for="dataNascimento">Data de Nascimento: </label>
+                        <input type="date" id="dataNascimento" name="dataNascimento" class="texto">
+                    </div>
+                </div>
+                <div>
+                    <label for="telefone">Telefone: </label>
+                    <input type="tel" id="telefone" name="telefone" required class="texto">
+                </div>
+                <fieldset id="selecao">
+                    <legend>
+                        <label for="sexo">Sexo: </label>
+                    </legend>
+                    <div>
+                        <input type="radio" id="sexo" name="sexo" value="feminino"> 
+                        <label for="feminino">Feminino</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="sexo" name="sexo" value="masculino">
+                        <label for="masculino">Masculino</label> 
+                    </div>
+                    <div>
+                        <input type="radio" id="sexo" name="sexo" value="outro"> 
+                        <label for="outro">Outro</label> 
+                    </div>
+                </fieldset>
+                <fieldset id="selecao">
+                    <legend>
+                        <label for="estadoCivil">Estado civil: </label>
+                    </legend>
+                    <div>
+                        <input type="radio" id="estadoCivil" name="estadoCivil" value="solteiro" checked>
+                        <label for="solteiro">Solteiro</label> 
+                    </div>
+                    <div>
+                        <input type="radio" id="estadoCivil" name="estadoCivil" value="casado">
+                        <label for="casado">Casado</label> 
+                    </div>
+                    <div>
+                        <input type="radio" id="estadoCivil" name="estadoCivil" value="divorciado">
+                        <label for="divorciado">Divorciado</label> 
+                    </div>
+                </fieldset>
+            </section>
+            <h2>Dados da Empresa</h2>
+            <section class="dados">
+                <div>
+                    <label for="cnpj">Cnpj: </label>
+                    <input type="text" id="cnpj" name="cnpj" placeholder="Insira sem pontos ou traços" class="texto">
+                </div>
+                <div>
+                    <label for="razaoSocial">Razão Social: </label>
+                    <input type="text" id="razaoSocial" name="razaoSocial" class="texto">
+                </div>
+                <fieldset id="selecao">
+                    <legend>
+                        <label for="ramoAtuacao">Ramo de Atuação: </label>
+                    </legend>
+                    <div>
+                        <input type="checkbox" id="ramoAtuacao" name="ramoAtuacao[]" value="industria">
+                        <label for="industria">Industria</label> 
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ramoAtuacao" name="ramoAtuacao[]" value="comercio">
+                        <label for="comercio">Comercio</label> 
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ramoAtuacao" name="ramoAtuacao[]" value="servicos">
+                        <label for="servicos">Serviços</label> 
+                    </div>
+                </fieldset>
+            </section>
+            <h2>Endereço</h2>
+            <section class="dados">
+                <div>
+                    <label for="cep">Cep: </label>
+                    <input type="number" placeholder="apenas numeros" id="cep" name="cep" class="texto">
+                </div>
+                <div>
+                    <label for="tipoLogradouro">Tipo de Logradouro: </label>
+                    <select name="tipoLogradouro" id="tipoLogradouro" class="texto">
+                        <option value="aeroporto">aeroporto</option>
+                        <option value="alameda">alameda</option>                    
+                        <option value="área">área</option>
+                        <option value="avenida">avenida</option>
+                        <option value="campo">campo</option>
+                        <option value="chácara">chácara</option>
+                        <option value="colônia">colônia</option>
+                        <option value="condomínio">condomínio</option> 
+                        <option value="conjunto">conjunto</option>
+                        <option value="distrito">distrito</option>
+                        <option value="esplanada">esplanada</option>
+                        <option value="estação">estação</option>
+                        <option value="estrada">estrada</option>
+                        <option value="favela">favela</option>
+                        <option value="fazenda">fazenda</option>
+                        <option value="feira">feira</option>
+                        <option value="jardim">jardim</option>
+                        <option value="ladeira">ladeira</option>
+                        <option value="lago">lago</option>
+                        <option value="lagoa">lagoa</option>
+                        <option value="largo">largo</option>
+                        <option value="loteamento">loteamento</option>
+                        <option value="morro">morro</option>
+                        <option value="núcleo">núcleo</option>
+                        <option value="parque">parque</option>
+                        <option value="passarela">passarela</option>
+                        <option value="pátio">pátio</option>
+                        <option value="praça">praça</option>
+                        <option value="quadra">quadra</option>
+                        <option value="recanto">recanto</option>
+                        <option value="residencial">residencial</option>
+                        <option value="rodovia">rodovia</option>
+                        <option value="rua">rua</option>
+                        <option value="setor">setor</option>
+                        <option value="sítio">sítio</option>
+                        <option value="travessa">travessa</option>
+                        <option value="trecho">trecho</option>
+                        <option value="trevo">trevo</option>
+                        <option value="vale">vale</option>
+                        <option value="vereda">vereda</option>
+                        <option value="via">via</option>
+                        <option value="viaduto">viaduto</option>
+                        <option value="viela">viela</option>
+                        <option value="vila">vila</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="logradouro">Logradouro: </label>
+                    <input type="text" id="logradouro" name="logradouro" class="texto">
+                </div>
+                <div>
+                    <label for="cidade">Cidade: </label>
+                    <input type="text" id="cidade" name="cidade" class="texto">
+                </div>
+                <div>
+                    <label for="estado">Estado: </label>
+                    <input type="text" id="estado" name="estado" class="texto">
+                </div>
+            </section>
+            <h2>Descrição do Interesse</h2>
+            <section class="dados">
+                <div>
+                    <textarea name="descricao-interesse" rows="5" cols="100"></textarea>
+                </div>
+            </section>
+            <h2>Outro</h2>
+            <section class="dados">
+                <!--4 checkbox-->
+                <!--3 radio-->
+                <fieldset id="selecao">
+                    <legend>
+                        <label for="cargoEmpresa">Selecione seu cargo na empresa: </label>
+                    </legend>
+                    <div>
+                        <input type="radio" id="cargoEmpresa" name="cargoEmpresa" value="adm">
+                        <label for="adm">Administrativo</label> 
+                    </div>
+                    <div>
+                        <input type="radio" id="cargoEmpresa" name="cargoEmpresa" value="financeiro">
+                        <label for="financeiro">Financeiro</label> 
+                    </div>
+                    <div>
+                        <input type="radio" id="cargoEmpresa" name="cargoEmpresa" value="vendas">
+                        <label for="vendas">Vendas</label> 
+                    </div>
+                    <div>
+                        <input type="radio" id="cargoEmpresa" name="cargoEmpresa" value="gerencia">
+                        <label for="gerencia">Gerencia</label> 
+                    </div>
+                    <div>
+                        <input type="radio" id="cargoEmpresa" name="cargoEmpresa" value="dono">
+                        <label for="dono">Dono</label> 
+                    </div>
+                </fieldset>
+                <fieldset id="selecao">
+                    <legend>
+                        <label for="tempoResposta">Tempo de resposta necessário: </label>
+                    </legend>
+                    <div>
+                        <input type="radio" id="tempoResposta" name="tempoResposta" value="60dias">
+                        <label for="60dias">60 dias</label> 
+                    </div> 
+                    <div>
+                        <input type="radio" id="tempoResposta" name="tempoResposta" value="30dias">
+                        <label for="30dias">30 dias</label> 
+                    </div>
+                    <div>
+                        <input type="radio" id="tempoResposta" name="tempoResposta" value="15dias">
+                        <label for="15dias">15 dias</label> 
+                    </div>
+                    <div>
+                        <input type="radio" id="tempoResposta" name="tempoResposta" value="7dias">
+                        <label for="7dias">7 dias</label> 
+                    </div>
+                </fieldset>
+                <fieldset id="selecao">
+                    <legend>
+                        <label for="contatoPref">Qual sua forma de contato preferêncial: </label>
+                    </legend>
+                    <div>
+                        <input type="checkbox" id="contatoPref" name="contatoPref" value="telefone">
+                        <label for="telefone">Telefone</label> 
+                    </div>
+                    <div>
+                        <input type="checkbox" id="contatoPref" name="contatoPref" value="email">
+                        <label for="email">E-mail</label> 
+                    </div>
+                    <div>
+                        <input type="checkbox" id="contatoPref" name="contatoPref" value="whatsapp">
+                        <label for="whatsapp">WhatsApp</label> 
+                    </div>
+                </fieldset>
+                <fieldset id="selecao">
+                    <legend>
+                        <label for="motivoContato">A que o contato se refere: </label>
+                    </legend>
+                    <div>
+                        <input type="checkbox" id="motivoContato" name="motivoContato" value="ofertaTrabalho">
+                        <label for="ofertaTrabalho">Oferta de Trabalho</label> 
+                    </div>
+                    <div>    
+                        <input type="checkbox" id="motivoContato" name="motivoContato" value="site">
+                        <label for="site">Sobre o site</label> 
+                    </div>
+                    <div>
+                        <input type="checkbox" id="motivoContato" name="motivoContato" value="curso">
+                        <label for="curso">Convite para cursos / workshops</label> 
+                    </div>
+                </fieldset>
+                <h3>Para ofertas de emprego, favor preencher:</h3>
+                <fieldset id="selecao">
+                    <legend>
+                        <label for="escolaridade">Escolha a escolaridade: </label>
+                    </legend>
+                    <div>
+                        <input type="checkbox" id="escolaridade" name="escolaridade" value="fundamental">
+                        <label for="fundamental">Ensino fundamental</label> 
+                    </div>
+                    <div>
+                        <input type="checkbox" id="escolaridade" name="escolaridade" value="medio">
+                        <label for="medio">Ensino medio</label> 
+                    </div>
+                    <div>
+                        <input type="checkbox" id="escolaridade" name="escolaridade" value="superior">
+                        <label for="superior">Ensino superior</label> 
+                    </div>
+                </fieldset>
+                <fieldset id="selecao">
+                    <legend>
+                        <label for="escola">Escolha o tipo de instituição: </label>
+                    </legend>
+                    <div>
+                        <input type="radio" id="escola" name="escola" value="particular">
+                        <label for="particular">Particular</label> 
+                    </div>
+                    <div>
+                        <input type="radio" id="escola" name="escola" value="estadual">
+                        <label for="estadual">Estadual</label> 
+                    </div>
+                    <div>
+                        <input type="radio" id="escola" name="escola" value="municipal">
+                        <label for="municipal">Municipal</label> 
+                    </div>
+                    <div>
+                        <input type="radio" id="escola" name="escola" value="federal">
+                        <label for="federal">Federal</label> 
+                    </div>
+                </fieldset>
+                <fieldset id="selecao">
+                    <legend>
+                        <label for="tipoEnsino">Informe o tipo de ensino: </label>
+                    </legend>
+                    <div>
+                        <input type="checkbox" id="tipoEnsino" name="tipoEnsino" value="presencial">
+                        <label for="presencial">Presencial</label> 
+                    </div>
+                    <div>
+                        <input type="checkbox" id="tipoEnsino" name="tipoEnsino" value="remoto">
+                        <label for="remoto">Remoto</label> 
+                    </div>
+                    <div>
+                        <input type="checkbox" id="tipoEnsino" name="tipoEnsino" value="hibrido">
+                        <label for="hibrido">Híbrido</label> 
+                    </div>
+                </fieldset>
+            </section>
+            <section class="botoes">
+                <button>Enviar</button>
+                <input type="reset" value="Limpar">
+            </section>
+        </form>
+    </main>
+</body>
+</html>

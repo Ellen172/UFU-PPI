@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Exercício3</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: white;
+        }
+        .menu {
+            margin: 0;
+            background-color: black;
+            text-align: center;
+        }
+        .menu > li{
+            display: inline-block;
+            padding: 20px;
+        }
+        li > a:visited, a:link {
+            padding: 20px;
+            color: white;
+            font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+            text-decoration: none;
+        }
+        li > a:hover, a:active {
+            color: rgb(0, 0, 0);
+            background-color: rgb(223, 220, 217);
+        }
+        main {
+            background-color: rgb(233, 233, 233);
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 40px;
+            border: 1px solid gray;
+            border-top: none;
+            box-shadow: 0 0 5px rgb(94, 93, 93);
+        }
+        h1 {
+            padding: 3px;
+            margin: 15px 0;
+            font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+            color: gray;
+        }
+        img {
+            width: 200px;
+            height: 145px;
+            margin: 20px;
+            border-radius: 15px;
+        }        
+    </style>
 </head>
 <body>
     <nav>
-        <ul>
+        <ul class="menu">
             <li><a href="#">Home</a> </li>
             <li><a href="#">Galeria</a> </li>
             <li><a href="#">Histórico</a> </li>

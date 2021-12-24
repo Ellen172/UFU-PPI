@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página refente ao curiculo da Srª Drª Maria de Lurdes Cristina">
+    <title>Curriculo</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+        li {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 1.5rem;
+        }
+        .menuPaginas {
+            margin: 0;
+            padding: 5px;
+            text-align: left;
+        }
+        .menuPaginas > li {
+            margin: 10px;
+            padding: 0;
+            display: inline-block;
+        }
+        .menuPaginas li > a:link, a:visited {
+            padding: 10px 30px;
+            background-color: rgb(60, 104, 39);
+            color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1rem;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 15px;
+        }
+        .menuPaginas li > a:hover, a:active {
+            background-color: white;
+            color: rgb(60, 104, 39);
+            border: 1px solid rgb(60, 104, 39);
+        }
+        #nomeFoto {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        h2 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.5rem;
+        }
+        #nomeFoto h2 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 2rem;
+            display: inline-block;
+            margin: 50px 20px;
+            vertical-align: center;
+        }
+        #nomeFoto img {
+            float: right;
+            margin: 0 20px;
+            width: 120px;
+            border: 1px solid black;
+            border-radius: 50%;
+            background-color: rgb(128, 172, 108);
+            padding: 10px;
+        }
+        main {
+            margin: 10px;
+        }
+        .menuNav {
+            background-color: rgb(128, 172, 108);
+            text-align: center;
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+        }
+        .menuNav > li {
+            display: inline-block;
+            padding: 10px 20px;
+        }
+        .menuNav > li > a:link, a:visited {
+            padding: 10px 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .menuNav > li > a:hover, a:active {
+            background-color: white;
+            border: 1px solid rgb(128, 172, 108);
+        }
+        #dadosPessoais p {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1em;
+            text-indent: 20px;
+        }
+        #dadosPessoais a {
+            color: black;
+            text-decoration: underline;
+            font-style: italic;
+        }
+        .mapa {
+            width: min-content;
+            margin: 0 auto;
+        }
+        iframe {
+            margin: 20px auto;
+            width: 450px;
+            height: 250px;
+            border: 0;
+        }
+        #contato > address {
+            background-color: rgb(128, 172, 108);
+            width: max-content;
+            padding: 5px 10px;
+            border-radius: 30px;
+            border: 1px dashed black;
+        }
+        blockquote {
+            text-align: right;
+            font-family: Snell Roundhand, cursive;
+            font-size: 0.9rem;
+            color: rgb(60, 104, 39);
+        }
+        </style>
+</head>
+<body>
+    <nav>
+        <ul class="menuPaginas">
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="nomeFoto">
+            <h2>Maria de Lurdes Cristina</h2>
+            <img src="images/perfil.png" alt="foto de perfil de Maria de Lurdes">
+        </section>
+        <section id="menuNavegacao">
+            <h2>Mini menu</h2>
+            <ul class="menuNav">
+                <li><a href="#dadosPessoais">Dados Pessoais</a> </li>
+                <li><a href="#formacaoAcademica">Formação Acadêmica</a> </li>
+                <li><a href="#experienciaProfissional">Experiência Profissional</a> </li>
+                <li><a href="#contato">Contato</a> </li>
+            </ul>
+        </section>
+        <section id="dadosPessoais">
+            <h2>Dados Pessoais</h2>
+            <p>
+                Nascida em Belo Horizonte, em 5 de Junho de 1985, minha mãe foi pintora e meu pai um exímio 
+                vendedor. Morei no mesmo bairro por anos, até que em 2003 entrei na 
+                <abbr title="Universidade Federal do Rio Branco">UFRB</abbr> pra estudar Artes e me mudei sozinha
+                para a pequena cidade (<a href="#mapaRB">veja no mapa</a>). Lá, me apaixonei pela educação e mudei meu curso para 
+                Ciências Sociais na intenção futura de me tornar professora, ministrando a mesma matéria 
+                nas Universidades.
+            </p>
+            <p>
+                Viajei por varias cidades pelo Brasil até que cheguei em Uberlandia. Uma cidade que me lembrava
+                a minha cidade natal, mas era muito maior. Decidi ficar e comecei meu mestrado, logo em seguida, 
+                meu douturado.
+            </p>
+            <div class="mapa">
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125739.81706945386!2d-67.90113722074092!3d-9.98632323863274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x917f7bb68acc96f3%3A0x8ab88f1d7f1d9b3c!2sRio%20Branco%2C%20AC!5e0!3m2!1spt-BR!2sbr!4v1639157126626!5m2!1spt-BR!2sbr" 
+                allowfullscreen="" loading="lazy" id="mapaRB">
+            </iframe>
+            </div>
+        </section>
+        <section id="formacaoAcademica">
+            <h2>Formação Academica</h2>
+            <ul>
+                <li>
+                    <strong>2004-2006</strong> Graduação em Ciências Sociais - <em>Universidade Federal do Rio Branco</em>
+                </li>
+                <li>
+                    <strong>2010-2012</strong> Mestrado - <em>Faculdade Online dos Aprendizes</em>
+                </li>
+                <li>
+                    <strong>2013-2016</strong> Doutorado - <em>Faculdade Online dos Aprendizes</em>
+                </li>
+            </ul>
+        </section>
+        <section id="experienciaProfissional">
+            <h2>Experiência Profissional</h2>
+            <ol start="2004">
+                <li>Vendedora na <em>Mercante Online Industrial</em></li>
+                <li>Vendedora na <em>Mercante Online Industrial</em></li>
+                <li>Vendedora na <em>Mercante Online Industrial</em></li>
+
+                <li>Professora de Sociologia na <em>Escola Municipal do Condado</em></li>
+                <li>Professora de Sociologia  na <em>Escola Municipal do Condado</em></li>
+                <li>Professora de Sociologia  na <em>Escola Municipal do Condado</em></li>
+                <li>Professora de Sociologia  na <em>Escola Municipal do Condado</em></li>
+
+                <li>Professora de Sociologia  na <em>Escola Estadual Coronel João Neves</em></li>
+                <li>Professora de Sociologia  na <em>Escola Estadual Coronel João Neves</em></li>
+                <li>Professora de Sociologia  na <em>Escola Estadual Coronel João Neves</em></li>
+                <li>Professora de Sociologia  na <em>Escola Estadual Coronel João Neves</em></li>
+                <li>Professora de Sociologia  na <em>Escola Estadual Coronel João Neves</em></li>
+
+                <li>Professora de Ciências Sociais na <em>Universidade Comunitaria de Nova Jersey</em></li>
+                <li>Professora de Ciências Sociais na <em>Universidade Comunitaria de Nova Jersey</em></li>
+                <li>Professora de Ciências Sociais na <em>Universidade Comunitaria de Nova Jersey</em></li>
+                <li>Professora de Ciências Sociais na <em>Universidade Comunitaria de Nova Jersey</em></li>
+                <li>Professora de Ciências Sociais na <em>Universidade Comunitaria de Nova Jersey</em></li>
+                <li>Professora de Ciências Sociais na <em>Universidade Comunitaria de Nova Jersey</em></li>
+
+            </ol>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <address>
+                <p>Telefone: <a href="tel:03499999999">03499999999</a></p>
+                <p>Email: <a href="mailto:exemplo@exemplo.com">exemplo@exemplo.com</a></p>
+                <p>Endereço: Rua das Araras, 45 Jardim Horlando 45-902.343 Uberlandia, MG</p>
+            </address>
+        </section>
+    </main>
+    <br> <hr>
+    <footer>
+        <blockquote><em>
+            Enquanto ensino continuo buscando, reprocurando. 
+            Ensino porque busco, porque indaguei, porque indago e me indago. 
+            Pesquiso para para constatar, contatando intervenho, intervindo educo e me educo. 
+            Pesquiso para conhecer o que ainda não conheço e comunicar ou anunciar a novidade.
+        </em></blockquote>
+    </footer>
+</body>
+</html>
