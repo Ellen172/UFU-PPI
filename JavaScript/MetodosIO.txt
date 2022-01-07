@@ -1,0 +1,10 @@
+console.log 
+    registra o conteúdo na janela 'console' do navegador 
+document.alert
+    exibe uma caixa de dialogo para mensagens (botão ok)
+document.write
+    adiciona conteúdo no documento html 
+window.confirm
+    exibe uma caixa de dialogo para confirmação (ok/cancelar)
+window.prompt
+    exibe uma caixa de dialogo para entrada de texto

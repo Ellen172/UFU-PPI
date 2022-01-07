@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Definindo variaveis - tecle F12 para depurar</h1>
+
+    <script>
+        let a = 1;
+        let b = 2;
+        let c = 3;
+
+        const d = b * b - 4 * a * c;
+        console.log("O valor do discriminante é: " + d);
+
+        var e = true; // variavel booleana
+        var f = 'programação para internet'; // string global
+
+        if (a < b){
+            let k = a + b; // k pode ser utilizada somente dentro do if
+            console.log(k);
+        }
+    </script>
+
+    <h2>Mais codigo</h2>
+
+    <script>
+        console.log(f);
+        console.log(window.f);
+    </script>
+</body>
+</html>
