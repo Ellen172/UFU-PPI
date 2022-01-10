@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        main {
+            margin: 10px;
+        }
+        img {
+            width: 60%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img src="img/egg.jpg" alt="passaro quebrando ovo">
+    </main>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const imagem = document.querySelector("img");
+            imagem.onclick = function () {
+                console.log("click");
+                this.src = "img/bird.jpg";
+                this.alt = "passaro";
+            }
+        });
+    </script>
+</body>
+</html>
