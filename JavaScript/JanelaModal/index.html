@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício1</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url("background.jpg");
+            background-size: 100%;
+            background-position: top;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            text-align: justify;
+        }
+        header > h1 {
+            background-color: #646262;
+            color: #f0eeee;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        main {
+            margin: 0 auto;
+            padding: 15px 50px 30px;
+        }
+        .modal {
+            background-color: #0005; /* 4º digito se refere a opacidade */
+            display: none; /* não aparece na tela */
+            width: 100%;
+            height: 100%;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            overflow: auto;
+            z-index: 1;
+        }
+        .modalContent {
+            background-color: white;
+            margin: auto;
+            padding: 20px;
+            border: 0.5px solid #aaa;
+            box-shadow: 0 0 5px #333;
+
+            width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .modalContent h2 {
+            text-align: center;
+        }
+        .modalContent button {
+            width: 100%;
+            background-color: rgb(179, 213, 235);
+            border-radius: 2px;
+            border: 1px solid rgb(159, 200, 255);
+            padding: 5px;
+            color: #333;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            outline: none;
+        }
+        .modalContent button:hover {
+            background-color: rgb(200, 223, 243);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Faculdade de Computação da UFU</h1>
+    </header>
+    <main>
+        <h1>A FACOM</h1>
+        <p>
+            A Faculdade de Computação (FACOM) da Universidade Federal de Uberlândia foi criada em 2000, 
+            a partir do extinto Departamento de Informática (DEINF), criado em 1988, no âmbito do CETEC. 
+        </p>
+        <p>
+            No início dos anos 2000 foi criado na Faculdade o Programa de Pós-Graduação em Ciência da Computação.
+        </p>
+        <h2>Cursos de Graduação</h2>
+        <p>
+            A FACOM oferece os cursos de Bacharelado em Ciência da Computação, em Uberlândia, e Bacharelado
+            em Sistemas de Informação, em Uberlândia e Monte Carmelo.
+        </p>
+        <h2>Curso de Pós-Graduação</h2>
+        <p>
+            A FACOM oferece também os cursos de Mestrado Acadêmico e Doutorado em Ciência da Computação.
+        </p>
+        <button type="button" id="btnOpenModal">Abrir modal</button>
+
+        <div id="modalTeste" class="modal">
+            <div class="modalContent">
+                <h2>Olá! Seja bem vindo!</h2>
+                <button class="buttonClose">OK</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+
+        window.onload = function () {
+
+            const modal = document.querySelector(".modal");
+            const buttonClose = modal.querySelector(".buttonClose");
+
+            buttonClose.addEventListener("click", function() {
+                modal.style.display = 'none';
+            });
+
+            const buttonOpenModal = document.getElementById("btnOpenModal");
+            
+            buttonOpenModal.addEventListener("click", function() {
+                modal.style.display = 'block';
+            });
+
+        }
+    </script>
+</body>
+</html>

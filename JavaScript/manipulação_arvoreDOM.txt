@@ -1,6 +1,0 @@
-document.querySelector 
-    aceita uma string de seleção css como paramentro 
-    retorna o primeiro nó na arvore DOM que atende à seleção
-    retorna 'null' se não encontrar correspondendo
-    se o seletor incluir pseudo-elementos, nenhum elemento é retornado
-
