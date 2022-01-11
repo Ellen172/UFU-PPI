@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url("background.jpg");
+            background-size: 100%;
+            background-position: top;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            text-align: justify;
+        }
+        header > h1 {
+            background-color: #646262;
+            color: #f0eeee;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        nav ul {
+            margin: 0;
+            padding: 5px 0;
+            width: 100%;
+            background-color: #cfcccc;
+            display: block;
+            text-align: center;
+        }
+        nav li {
+            display: inline;
+        }
+        nav button {
+            border: none;
+            outline: none;
+            padding: 0 10px;
+            background-color: inherit;
+            height: 30px;
+            margin: 0;
+        }
+        nav button:hover {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        button.buttonActive {
+            font-weight: bold;
+            color: blue;
+        }
+
+        .tabs section {
+            display: none;
+        }
+        section.tabActive {
+            display: block;
+        }
+
+        main {
+            background-color: white;
+            width: 60%;
+            margin: 10px auto;
+            padding: 15px 50px 30px;
+            border: 1px solid #bbb7b7;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Faculdade de Computação da UFU</h1>
+    </header>
+    <nav>
+        <section>
+            <ul>
+                <li><button data-tabname="BCC">Ciencia da Computação</button>|</li>
+                <li><button data-tabname="BSI">Sistemas de Informação</button>|</li>
+                <li><button data-tabname="MEST">Mestrado</button>|</li>
+                <li><button data-tabname="DOUT">Doutorado</button></li>
+            </ul>
+        </section>
+    </nav>
+
+    <main>
+        
+        <div class="tabs">
+            <section data-tabname="BCC">
+                <h2>Ciencia da Computação</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+            </section>
+            <section data-tabname="BSI">
+                <h2>Sistemas de Informação</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+            </section>
+            <section data-tabname="MEST">
+                <h2>Mestrado</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+            </section>
+            <section data-tabname="DOUT">
+                <h2>Doutorado</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        window.onload = function () {
+            buttons = document.querySelectorAll("nav button");
+            for (let button of buttons) {
+                button.onclick = () => openTab(button.dataset.tabname);
+            }
+            openTab("BCC");
+        }
+
+        function openTab(tabName) {
+            // retira o valor do atributo
+            const lastTabActive = document.querySelector(".tabActive");
+            if(lastTabActive !== null)
+                lastTabActive.className = ""; 
+
+            const lastButtonActive = document.querySelector(".buttonActive");
+            if(lastButtonActive !== null) 
+                lastButtonActive.className = "";
+
+            const query1 = ".tabs > section[data-tabname='" + tabName + "']"
+            const query2 = "nav button[data-tabname='" + tabName + "']"
+            
+            // add novo valor ao atributo
+            document.querySelector(query1).className = "tabActive";
+            document.querySelector(query2).className = "buttonActive";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {
+            width: max-content;
+            height: max-content;
+            padding: 20px 30px;
+            border-radius: 10px;
+            border: 1px solid rgb(151, 149, 149);
+            background-color: rgb(195, 195, 236);
+
+        }
+        div label {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        div > button {
+            margin: 0 10px;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.7em;
+            font-style: italic;
+        }
+        ol {
+            width: 80%;
+            display: block;
+        }
+        li {
+            background-color: rgb(202, 201, 201);
+            padding: 5px;
+            margin: 10px 5px;
+            border: 1px solid rgb(151, 149, 149);
+            border-radius: 3px;
+        }
+        li button {
+            float: right;
+            color: red;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="interesse">Interesse: </label>
+        <input type="text" id="interesse" name="interesse">
+        <button>Adicionar</button>
+        <ol>
+        </ol>
+    </div>
+
+    <script>
+        window.onload = function () {
+            // botão
+            const botaoAdd = document.querySelector("button");
+            botaoAdd.addEventListener("click", adicionaInteresse);
+
+            // enter
+            const campoInteresse = document.querySelector("#interesse");
+            campoInteresse.addEventListener("keyup", e => {
+                if(e.key === "Enter") // executa se for clicado o enter no input
+                    adicionaInteresse();
+            })
+        }
+
+        function adicionaInteresse() {
+            const campoInteresse = document.querySelector("#interesse"); // campo do input
+            const listaInteresses = document.querySelector("ol");
+
+            const novoLi = document.createElement("li"); // cria elemento
+            const novoSpan = document.createElement("span"); // cria um span
+            const novoBotao = document.createElement("button"); // cria botao
+
+            novoSpan.textContent = campoInteresse.value; // o valor do li estará no span
+            novoBotao.textContent = 'X';
+
+            novoLi.appendChild(novoSpan); // adiciona o span como proximo filho do li
+            novoLi.appendChild(novoBotao); // add botao como filho do li
+            listaInteresses.appendChild(novoLi); // adiciona li como filho do ol(listaInteresse)
+            
+            novoBotao.onclick = function() {
+                listaInteresses.removeChild(novoLi); // remove o nó novoli
+                // novoLi.remove()
+                // novoLi.parentNode.removeChild(novoLi)
+            }
+
+            campoInteresse.value = ''; // coloca vazio para reiniciar
+        }
+    </script>
+</body>
+</html>

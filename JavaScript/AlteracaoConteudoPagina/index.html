@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url("background.jpg");
+            background-size: 100%;
+            background-position: top;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            text-align: justify;
+        }
+        header > h1 {
+            background-color: #646262;
+            color: #f0eeee;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        nav ul {
+            margin: 0;
+            padding: 5px 0;
+            width: 100%;
+            background-color: #cfcccc;
+            display: block;
+            text-align: center;
+        }
+        nav li {
+            display: inline;
+        }
+        nav button {
+            border: none;
+            outline: none;
+            padding: 0 10px;
+            background-color: inherit;
+            height: 30px;
+            margin: 0;
+        }
+        nav button:hover {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        button.buttonActive {
+            font-weight: bold;
+            color: blue;
+        }
+
+        .tabs section {
+            display: none;
+        }
+        section.tabActive {
+            display: block;
+        }
+
+        main {
+            background-color: white;
+            width: 60%;
+            margin: 10px auto;
+            padding: 15px 50px 30px;
+            border: 1px solid #bbb7b7;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Faculdade de Computação da UFU</h1>
+    </header>
+    <nav>
+        <section>
+            <ul>
+                <li><button>Ciencia da Computação</button>|</li>
+                <li><button>Sistemas de Informação</button>|</li>
+                <li><button>Mestrado</button>|</li>
+                <li><button>Doutorado</button></li>
+            </ul>
+        </section>
+    </nav>
+
+    <main>
+        
+        <div class="tabs">
+            <section>
+                <h2>Ciencia da Computação</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+            </section>
+            <section>
+                <h2>Sistemas de Informação</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+            </section>
+            <section>
+                <h2>Mestrado</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+            </section>
+            <section>
+                <h2>Doutorado</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum vehicula dui vitae molestie. Suspendisse venenatis ipsum ac aliquam ullamcorper. Donec rhoncus dignissim est. Aliquam condimentum, lacus non ultricies cursus, orci libero ullamcorper quam, at aliquet nisl urna eget nibh. Donec viverra mauris ut libero suscipit, nec tristique nisl volutpat. Duis ac ipsum at erat tempor varius non sed ex. Etiam sit amet vehicula magna, ac tempor massa. Fusce nec efficitur sem, id interdum nisl. Phasellus dictum efficitur lacus ac venenatis. Vestibulum aliquam consectetur erat. Nullam mattis suscipit mauris sed pretium. Quisque varius sem erat, quis pulvinar sem sollicitudin a. Quisque accumsan dolor velit, in tristique dolor lacinia vitae. Fusce in turpis mauris.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        window.onload = function () {
+            buttons = document.querySelectorAll("nav button");
+            for (let button of buttons) {
+                button.addEventListener("click", changeTab);
+            }
+            openTab(a);
+        }
+
+        function changeTab(e) {
+            const botaoAcionado = e.target; // botao que foi prescionado
+            const liDoBotao = botaoAcionado.parentNode; // no pai do botao, ul
+            const nodes = Array.from(liDoBotao.parentNode.children); // lista dos nos filhos do ul
+            const index = nodes.indexOf(liDoBotao); // vetor da lista criada anteriormente
+            openTab(index); // torna visivel o section correspondente ao indice
+        }
+
+        function openTab(i) {
+            // retira o valor do atributo
+            const tabActive = document.querySelector(".tabActive");
+            if(tabActive !== null)
+                tabActive.className = ""; 
+
+            const buttonActive = document.querySelector(".buttonActive");
+            if(buttonActive !== null) 
+                buttonActive.className = "";
+            
+            // add novo valor ao atributo
+            document.querySelectorAll(".tabs section")[i].className = "tabActive";
+            document.querySelectorAll("nav button")[i].className = "buttonActive";
+        }
+    </script>
+</body>
+</html>
