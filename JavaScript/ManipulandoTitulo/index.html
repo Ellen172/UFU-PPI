@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Clique neste titulo</h1>
+        <h1>Titulo titulo</h1>
+        <h1>Titulo titulo</h1>
+        <h1>Titulo titulo</h1>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const nodeH1 = document.querySelector("h1");
+            nodeH1.addEventListener("click", alteraConteudoTitulo);
+        })
+
+        function alteraConteudoTitulo() {
+            const nodeH1 = document.querySelectorAll("h1");
+            for (let node of nodeH1) {
+                node.textContent = "O titulo foi alterado";
+            }
+        }
+    </script>
+</body>
+</html>
