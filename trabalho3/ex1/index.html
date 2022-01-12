@@ -17,11 +17,11 @@
             padding: 10px;
             border: 1px solid #937d97;
         }
-        .botao {
+        .btnOpenModal {
             display: block;
             text-align: center;
         }
-        .botao button {
+        .btnOpenModal button {
             width: 30%;
             padding: 5px 0;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -88,7 +88,7 @@
             <h2>Titulo</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <div class="botao">
+            <div class="btnOpenModal">
                 <button>Janela Modal</button>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -101,7 +101,22 @@
                 <button class="btnContinue">Continuar</button>
             </div>
         </div>
-        
+
+        <script>
+            window.onload = function () {
+                const modal = document.querySelector(".modal"); // modal se refere a div com class="modal"
+                const btnContinue = modal.querySelector(".btnContinue"); // btnContinue se refere ao button com class="btnContinue"
+
+                btnContinue.addEventListener("click", function () { // quando o botão da janela modal é clicado..
+                    modal.style.display = 'none'; // janela modal desaparece
+                })
+
+                const btnOpenModal = document.querySelector(".btnOpenModal"); // btnOpenModal se refere ao button com class="btnOpenModal"
+                btnOpenModal.addEventListener("click", function() { // quando botão é clicado..
+                    modal.style.display = 'block'; // janela modal aparece
+                })
+            }
+        </script>
     </main>
 </body>
 </html>
