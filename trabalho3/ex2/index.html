@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio2</title>
+    <style>
+        main {
+            background-color: rgb(216, 215, 215);
+            border: 1px solid grey;
+            border-radius: 10px;
+            width: 50%;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        main div {
+            text-align: center;
+        }
+        div label {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.2em;
+            margin: 5px;
+        }
+        div input {
+            width: 50%;
+            border-radius: 5px;
+            border: 1px solid grey;
+            margin: 5px;
+        }
+        div button {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid grey;
+            background-color: rgb(238, 238, 238);
+            margin: 5px;
+            padding: 3px 10px;
+            cursor: pointer;
+        }
+        div button:hover {
+            background-color: white;
+            border: 2px solid black;
+            margin: 4px;
+            box-shadow: 0 0 0 0.5px white;
+        }
+        main li {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1em;
+            background-color: rgb(176, 210, 238);
+            border: 1px solid #5b90b3;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin: 5px;
+        }
+        li span {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1em;
+        }
+        li button {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: red;
+            float: right;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <label for="interesse">Interesse: </label>
+            <input type="text" id="interesse" name="interesse">
+            <button>Adicionar</button>
+        </div>
+        <ol>
+            <li><span>a</span><button>X</button></li>
+            <li><span>b</span><button>X</button></li>
+        </ol>
+    </main>
+</body>
+</html>
