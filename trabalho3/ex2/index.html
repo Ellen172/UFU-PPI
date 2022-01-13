@@ -83,10 +83,7 @@
             <input type="text" id="interesse" name="interesse">
             <button>Adicionar</button>
         </div>
-        <ol>
-            <li><span>a</span><button>X</button></li>
-            <li><span>b</span><button>X</button></li>
-        </ol>
+        <ol></ol>
     </main>
 
     <script>
@@ -99,6 +96,27 @@
                 if(e.key === "Enter") // executa se for clicado o enter no input
                     inserirElemento();
             });
+        }
+
+        function inserirElemento() {
+            const textInserir = document.querySelector("#interesse"); // refere-se ao input
+            const lista = document.querySelector("ol"); // refere a lista de interesse
+            const novoLi = document.createElement("li"); // cria elemento li
+            const novoSpan = document.createElement("span"); // cria elemento span
+            const novoBotao = document.createElement("button"); // cria botao    
+            
+            novoSpan.textContent = textInserir.value; // valor do input (texto escrito nele) é inserido como conteudo no novoSpan
+            novoBotao.textContent = 'X'; // 'X' inserido como valor do novoBotao
+
+            novoLi.appendChild(novoSpan); // adiciona novoSpan como filho de novoLi
+            novoLi.appendChild(novoBotao); // adiciona novoBotao como filho de novoLi
+            lista.appendChild(novoLi); // adiciona novoLi como filho de lista
+
+            novoBotao.onclick = function() { // quando clica no botão
+                lista.removeChild(novoLi); // remove o novoLi
+            }
+
+            textInserir.value = ''; // coloca valor vazio para o input para reiniciar
         }
     </script>
 </body>
