@@ -68,6 +68,12 @@
             background-color: transparent;
             cursor: pointer;
         }
+        li button:hover {
+            transform: scale(1.2, 1.2);
+        }
+        li button:active {
+            color: blue;
+        }
     </style>
 </head>
 <body>
@@ -82,5 +88,18 @@
             <li><span>b</span><button>X</button></li>
         </ol>
     </main>
+
+    <script>
+        window.onload = function () {
+            const btnAdd = document.querySelector("button"); // localiza o botão que está na página
+            btnAdd.addEventListener("click", inserirElemento); // quando o botão for clicado é executado a função inserirElemento
+
+            const campoInteresse = document.querySelector("#interesse"); // campoInteresse refere-se ao input com id="interesse"
+            campoInteresse.addEventListener("keyup", e => {
+                if(e.key === "Enter") // executa se for clicado o enter no input
+                    inserirElemento();
+            });
+        }
+    </script>
 </body>
 </html>
