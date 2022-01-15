@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio4</title>
+    <style>
+        body {
+            background-image: url("img/background.png");
+            background-position: top;
+            background-size: 40%;
+        }
+        .loginBox {
+            width: 50%;
+            padding: 30px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 1px solid rgb(114, 114, 114);
+            border-radius: 30px;
+            box-shadow: 5px 10px 10px #888888;
+        }
+        .loginBox div {
+            margin: 20px 0;
+        }
+        .loginBox h3 {
+            margin: 5px 0 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 2em;
+        }
+        .loginBox label {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1em;
+        }
+        .loginBox input {
+            width: 95%;
+            display: block;
+            margin: 5px 0;
+            padding: 5px;
+            border: 1px solid grey;
+            border-radius: 5px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1em;
+        }
+        .loginBox span {
+            display: block;
+            color: red;
+            font-style: italic;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 0.9em;
+            font-weight: bold;
+            text-align: right;
+        }
+        .loginBox button {
+            background-color: rgb(226, 109, 67);
+            border: 1px solid grey;
+            border-radius: 10px;
+            width: min-content;
+            display: block;
+            margin: 10px auto;
+            padding: 5px 10px;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1em;
+        }
+        .loginBox button:hover {
+            padding: 4px 9px;
+            cursor: pointer;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="loginBox">
+            <h3>Cadastro de Usuário</h3>
+
+            <form name="formCadastro" action="action.php" methos="post">
+
+                <div>
+                    <label for="usuario">Usuário: </label>
+                    <input type="text" id="usuario" name="usuario" autocomplete="off">
+                    <span></span>
+                </div>
+
+                <div>
+                    <label for="senha">Senha: </label>
+                    <input type="password" id="senha" name="senha">
+                    <span></span>
+                </div>
+
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" autocomplete="off">
+                    <span></span>
+                </div>
+
+                <button>Cadastrar</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        window.onload = function () {
+            document.forms.formCadastro.onsubmit = validaForm; // localiza o formCadastro definido como um form da pagina e quando for enviado executa a função validaForm
+        }
+
+        function validaForm(e) {
+            let form = e.target; // form = formulario do evento, ou seja, formCadastro
+            let formValido = true; // variavel para definir a validade do form, inicia em true
+
+            const spanUsuario = form.usuario.nextElementSibling; // localiza o proximo elemento irmão de usuario, ou seja, o input usuario
+            const spanSenha = form.senha.nextElementSibling; // localiza o proximo elemento senha de usuario, ou seja, o input senha
+            const spanEmail = form.email.nextElementSibling; // localiza o proximo elemento irmão de email, ou seja, o input email
+
+            spanUsuario.textContent = ""; // altera o texto do input usuario para vazio
+            spanSenha.textContent = ""; // altera o texto do input senha para vazio
+            spanEmail.textContent = ""; // altera o texto do input email para vazio
+
+            if(form.usuario.value === "") { // se o valor do input de usuario for vazio executa o if
+                spanUsuario.textContent = "O usuário deve ser preenchido"; // altera texto do span para aparecer uma mensagem
+                formValido = false; // define o formulario como invalido
+            }
+            if(form.senha.value === "") { // se o valor do input de senha for vazio executa o if
+                spanSenha.textContent = "A senha deve ser preenchida"; // altera texto do span para aparecer uma mensagem
+                formValido = false; // define o formulario como invalido
+            }
+            if(form.email.value === "") { // se o valor do input de email for vazio executa o if
+                spanEmail.textContent = "O email deve ser preenchido"; // altera texto do span para aparecer uma mensagem
+                formValido = false; // define o formulario como invalido
+            }
+            return formValido; // retorna o valor que define de o form é valido
+        }
+    </script>
+</body>
+</html>
