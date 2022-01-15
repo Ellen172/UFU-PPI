@@ -30,10 +30,10 @@
         nav ul {
             display: block;
             margin: 0;
-            
+            text-align: center;            
         }
         nav li {
-            display: inline-block;
+            display: inline;
             color: black;
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -119,11 +119,6 @@
         address a {
             color: rgb(46, 46, 58);
         }
-        .image-bsi-mc {
-            display: block;
-            width: 80%;
-            margin: 15px auto;
-        }
     </style>
 </head>
 <body>
@@ -145,7 +140,6 @@
             <section data-tabname="SIMC">
                 <h2>Bacharelado em Sistema de Informação - Campus Monte Carmelo</h2>
                 <h4>BSI-MC</h4>
-                <img class="image-bsi-mc" src="img/bsi-mc.jpeg" alt="sala com computadores">
                 <h3>Sobre o curso:</h3>
                 <p>O curso de Bacharelado em Sistemas de Informação da Universidade Federal de Uberlândia Campus Monte Carmelo foi criado em 2010 e teve o seu reconhecimento em 29 de junho de 2015 por meio da Portaria 492/15 do Ministério da Educação, iniciando suas aulas em 2011.</p>
                 <p>O objetivo do curso é:</p>
@@ -264,29 +258,29 @@
 
     <script>
         window.onload = function () {
-            buttons = document.querySelectorAll("nav button");
-            for (let button of buttons) {
-                button.onclick = () => openTab(button.dataset.tabname);
+            //openTab("BCC");
+            buttons = document.querySelectorAll("nav button"); // localizar todos os botão do nav
+            for (let button of buttons) { // para cada botão executar o if
+                button.onclick = () => openTab(button.dataset.tabname); // executar a função openTab quando o botão for clicado
             }
-            openTab("BCC");
         }
 
         function openTab(tabName) {
             // retira o valor do atributo
-            const lastTabActive = document.querySelector(".tabActive");
-            if(lastTabActive !== null)
-                lastTabActive.className = ""; 
+            const lastTabActive = document.querySelector(".tabActive"); // pega a ultima classe 'tabActive'
+            if(lastTabActive !== null) // se não for nulo executa o if
+                lastTabActive.className = ""; // altera para não ter uma classe
 
-            const lastButtonActive = document.querySelector(".buttonActive");
-            if(lastButtonActive !== null) 
-                lastButtonActive.className = "";
+            const lastButtonActive = document.querySelector(".buttonActive"); // pega a ultima classe 'buttonActive'
+            if(lastButtonActive !== null) // se não for nulo executa o if
+                lastButtonActive.className = ""; // altera para não ter uma classe
 
             // add novo valor ao atributo
-            const query1 = ".tabs > section[data-tabname='" + tabName + "']"
-            const query2 = "nav button[data-tabname='" + tabName + "']"
+            const query1 = ".tabs > section[data-tabname='" + tabName + "']"; // const definido com a tabName, parametro da função - define a section a ser ativada
+            const query2 = "nav button[data-tabname='" + tabName + "']"; // const definido com a tabName, parametro da função - define o botão a ser ativado
                 
-            document.querySelector(query1).className = "tabActive";
-            document.querySelector(query2).className = "buttonActive";
+            document.querySelector(query1).className = "tabActive"; // altera a classe da section para 'tabActive'
+            document.querySelector(query2).className = "buttonActive"; // altera a classe do botão para 'buttonActive'
         }
     </script>
 </body>
