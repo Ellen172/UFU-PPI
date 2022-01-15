@@ -34,11 +34,11 @@
         }
         nav li {
             display: inline-block;
-            padding: 10px 0;
             color: black;
             font-family: Arial, Helvetica, sans-serif;
         }
         nav button {
+            padding: 10px;
             margin: 0;
             border: none;
             background-color: transparent;
@@ -47,6 +47,23 @@
             font-weight: bold;
             cursor: pointer;
             
+        }
+        nav button:hover {
+            padding: 9px;
+            background-color: whitesmoke;
+            border: 1px solid #11568f;
+            color: #11568f;
+            cursor: pointer;
+        }
+        button .buttonActive {
+            font-weight: bold;
+            color: blue;
+        }
+        .tabs section {
+            display: none;
+        }
+        section.tabActive {
+            display: block;
         }
         main {
             background-color: white;
@@ -114,11 +131,13 @@
         <h1>Universidade Federal de Uberlândia</h1>
     </header>
     <nav>
-        <ul>
-            <li><button data-tabname="SIMC">Sistemas de Informação - Monte Carmelo</button>|</li>
-            <li><button data-tabname="SISM">Sistemas de Informação - Santa Monica</button>|</li>
-            <li><button data-tabname="CCSM">Ciência da Computação - Santa Monica</button></li>
-        </ul>
+        <section>
+            <ul>
+                <li><button data-tabname="SIMC">Sistemas de Informação - Monte Carmelo</button>|</li>
+                <li><button data-tabname="SISM">Sistemas de Informação - Santa Monica</button>|</li>
+                <li><button data-tabname="CCSM">Ciência da Computação - Santa Monica</button></li>
+            </ul>
+        </section>
     </nav>
 
     <main>
@@ -242,5 +261,33 @@
             </section>
         </div>
     </main>
+
+    <script>
+        window.onload = function () {
+            buttons = document.querySelectorAll("nav button");
+            for (let button of buttons) {
+                button.onclick = () => openTab(button.dataset.tabname);
+            }
+            openTab("BCC");
+        }
+
+        function openTab(tabName) {
+            // retira o valor do atributo
+            const lastTabActive = document.querySelector(".tabActive");
+            if(lastTabActive !== null)
+                lastTabActive.className = ""; 
+
+            const lastButtonActive = document.querySelector(".buttonActive");
+            if(lastButtonActive !== null) 
+                lastButtonActive.className = "";
+
+            // add novo valor ao atributo
+            const query1 = ".tabs > section[data-tabname='" + tabName + "']"
+            const query2 = "nav button[data-tabname='" + tabName + "']"
+                
+            document.querySelector(query1).className = "tabActive";
+            document.querySelector(query2).className = "buttonActive";
+        }
+    </script>
 </body>
 </html>

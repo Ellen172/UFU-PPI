@@ -53,7 +53,7 @@
             cursor: pointer;
             text-decoration: underline;
         }
-        button.buttonActive {
+        button .buttonActive {
             font-weight: bold;
             color: blue;
         }
@@ -150,10 +150,10 @@
             if(lastButtonActive !== null) 
                 lastButtonActive.className = "";
 
+            // add novo valor ao atributo
             const query1 = ".tabs > section[data-tabname='" + tabName + "']"
             const query2 = "nav button[data-tabname='" + tabName + "']"
-            
-            // add novo valor ao atributo
+                
             document.querySelector(query1).className = "tabActive";
             document.querySelector(query2).className = "buttonActive";
         }
