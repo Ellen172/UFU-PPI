@@ -27,17 +27,16 @@
         <tbody>
             <?php 
                 $codProd = $_GET['codProd'];
-                $i = 1;
-                foreach ($codProd as $produto) { 
-
+                $descProd = $_GET['desc'];
+                for ($i=0; $i<10; $i++) { 
+                    $ind = $i + 1;
                     $str = <<<BLOCO
                         <tr>
-                        <th scope="row">$i</th>
-                        <td>$produto</td>
-                        <td>Descrição</td>
+                        <th scope="row">$ind</th>
+                        <td>$codProd[$i]</td>
+                        <td>$descProd[$i]</td>
                         </tr>
                     BLOCO;
-                    $i++;
                     echo $str;
                 }
                 
