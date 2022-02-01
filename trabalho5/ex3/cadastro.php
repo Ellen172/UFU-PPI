@@ -31,51 +31,48 @@
     </style>
 </head>
 <body>
+    
     <div class="container">
         <main>
-            <?php
-
-                function carregaString($arquivo)
-                {
-                    $arq = fopen($arquivo, "r");
-                    $string = fgets($arq);
-                    fclose($arq);
-                    return $string;
-                }
+            <?php 
 
                 $arqEmail = "email.txt";
-                $emailCad = carregaString($arqEmail);
-                $emailEnv = $_POST["email"];
-                if(!strcmp($emailCad, $emailEnv)){
-                    $str1 = <<<STR1
-                    <h2>Email correto!</h2>
-                    STR1;
-                    echo $str1;
-                } else {
-                    $str1 = <<<STR1
-                    <h2>Email incorreto!</h2>
-                    STR1;
-                    echo $str1;
-                }
+                $email = $_POST["email"];
+                $email = htmlspecialchars($email);
                 
+                salvaString($email, $arqEmail);
+                
+                $respEmail = <<<RESP
+                <h3>Email salvo com sucesso!</h3>
+                RESP;
+                echo $respEmail;
                 
                 $arqSenha = "senhaHash.txt";
-                $senhaCad = carregaString($arqSenha);
-                $senhaEnv = $_POST["senha"];
-                if(password_verify($senhaEnv, $senhaCad)){
+                $senha = $_POST["senha"];
+                $senha = htmlspecialchars($senha);
+                $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+                
+                salvaString($senhaHash, $arqSenha);
+                
+                $respSenha = <<<RESP
+                <h3>Senha salvo com sucesso!</h3>
+                RESP;
+                echo $respSenha;
 
-                    $str1 = <<<STR1
-                    <h2>Senha correta!</h2>
-                    STR1;
-                    echo $str1;
-                } else {
-                    $str1 = <<<STR1
-                    <h2>Senha incorreta!</h2>
-                    STR1;
-                    echo $str1;
+
+
+                function salvaString($string, $arquivo)
+                {
+                    $arq = fopen($arquivo, "w");
+                    fwrite($arq, $string);
+                    fclose($arq);
                 }
+
             ?>
-            
+
+            <form action="dados.php" method="POST">
+                <button type="submit" class="btn btn-primary">Ver Dados</button>
+            </form>
         </main>
     </div>
 </body>
