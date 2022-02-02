@@ -70,7 +70,7 @@
 
             ?>
 
-            <form action="dados.php" method="POST">
+            <form action="ex4_dados.php" method="POST">
                 <button type="submit" class="btn btn-primary">Ver Dados</button>
             </form>
         </main>

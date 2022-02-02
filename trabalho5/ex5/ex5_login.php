@@ -1,3 +1,13 @@
+<?php
+    function sucesso(){
+        header("Location:ex5_sucesso.php");
+        exit();
+    }
+    function erro(){
+        header("Location:ex5_login.html");
+        exit();
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -46,33 +56,15 @@
                 $arqEmail = "email.txt";
                 $emailCad = carregaString($arqEmail);
                 $emailEnv = $_POST["email"];
-                if(!strcmp($emailCad, $emailEnv)){
-                    $str1 = <<<STR1
-                    <h2>Email correto!</h2>
-                    STR1;
-                    echo $str1;
-                } else {
-                    $str1 = <<<STR1
-                    <h2>Email incorreto!</h2>
-                    STR1;
-                    echo $str1;
-                }
-                
-                
+
                 $arqSenha = "senhaHash.txt";
                 $senhaCad = carregaString($arqSenha);
                 $senhaEnv = $_POST["senha"];
-                if(password_verify($senhaEnv, $senhaCad)){
 
-                    $str1 = <<<STR1
-                    <h2>Senha correta!</h2>
-                    STR1;
-                    echo $str1;
+                if(!strcmp($emailCad, $emailEnv) and password_verify($senhaEnv, $senhaCad)){
+                    sucesso();
                 } else {
-                    $str1 = <<<STR1
-                    <h2>Senha incorreta!</h2>
-                    STR1;
-                    echo $str1;
+                    erro();
                 }
             ?>
             
