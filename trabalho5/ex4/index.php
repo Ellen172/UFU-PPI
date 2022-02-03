@@ -21,7 +21,8 @@
                     return $string;
                 }
 
-                $arqEmail = "email.txt";
+                $arqEmail = "/home/www/ppi-12011bsi208-trabalho1.atwebpages.com/trabalho5/email.txt";
+                //$arqEmail = "email.txt";
                 $email = carregaString($arqEmail);
                 $str1 = <<<STR1
                     <div class="col">
@@ -30,7 +31,8 @@
                     STR1;
                 echo $str1;
                 
-                $arqSenha = "senhaHash.txt";
+                $arqSenha = "/home/www/ppi-12011bsi208-trabalho1.atwebpages.com/trabalho5/senhaHash.txt";
+                //$arqSenha = "senhaHash.txt";
                 $senha = carregaString($arqSenha);
                 $str1 = <<<STR1
                     <div class="col">
