@@ -36,7 +36,8 @@
         <main>
             <?php 
 
-                $arqEmail = "email.txt";
+                $arqEmail = "/home/www/ppi-12011bsi208-trabalho1.atwebpages.com/trabalho5/email.txt";
+                //$arqEmail = "email.txt";
                 $email = $_POST["email"];
                 $email = htmlspecialchars($email);
                 
@@ -47,7 +48,8 @@
                 RESP;
                 echo $respEmail;
                 
-                $arqSenha = "senhaHash.txt";
+                $arqSenha = "/home/www/ppi-12011bsi208-trabalho1.atwebpages.com/trabalho5/senhaHash.txt";
+                //$arqSenha = "senhaHash.txt";
                 $senha = $_POST["senha"];
                 $senha = htmlspecialchars($senha);
                 $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
@@ -69,10 +71,6 @@
                 }
 
             ?>
-
-            <form action="ex4_dados.php" method="POST">
-                <button type="submit" class="btn btn-primary">Ver Dados</button>
-            </form>
         </main>
     </div>
 </body>
