@@ -26,15 +26,23 @@
         </thead>
         <tbody>
             <?php 
+                $qtd = $_GET['qtd'];
                 $codProd = $_GET['codProd'];
                 $descProd = $_GET['desc'];
-                for ($i=0; $i<10; $i++) { 
+
+                for($j=0; $j<$qtd; $j++){
+                    $numbers[$j] = $j;
+                }
+                //$keys=array_rand($numbers,$qtd); // array desordenado - não funciona para array com tamanho total de elementos.
+
+                for ($i=0; $i<$qtd; $i++) { 
+                    $x = array_rand($numbers);
                     $ind = $i + 1;
                     $str = <<<BLOCO
                         <tr>
                         <th scope="row">$ind</th>
-                        <td>$codProd[$i]</td>
-                        <td>$descProd[$i]</td>
+                        <td>$codProd[$x]</td>
+                        <td>$descProd[$x]</td>
                         </tr>
                     BLOCO;
                     echo $str;
