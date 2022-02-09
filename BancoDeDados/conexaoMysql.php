@@ -2,10 +2,10 @@
 
 function mysqlConnect()
 {
-  $db_host = "fdb7.awardspace.net"; // endereço do servido do MySQL
-  $db_username = "seu_usuario_no_mysql"; // usuario para acessar banco de dados
-  $db_password = "senha_do_usuario"; // senha para acessar banco de dados
-  $db_name = "nome_do_banco_de_dados"; // nome do banco de dados ao qual se pretende acessar
+  $db_host = "fdb33.awardspace.net"; // endereço do servido do MySQL
+  $db_username = "4003175_teste"; // usuario para acessar banco de dados
+  $db_password = "host@award2021"; // senha para acessar banco de dados
+  $db_name = "4003175_teste"; // nome do banco de dados ao qual se pretende acessar
 
   // dsn é apenas um acrônimo de database source name
   $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8mb4";
