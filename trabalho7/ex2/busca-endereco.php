@@ -28,7 +28,9 @@ try {
   WHERE cep = ?
   SQL;
   
-  $cep = $_GET['cep'] ?? ''; // busca o cep (passado pela url no index)
+/* busca o cep (passado pela url no index) 
+  usando htmlespecialchars para combater sql injection */
+  $cep = htmlspecialchars($_GET['cep'] ?? ''); 
 
 /* prepara e executa o codigo sql
   passando como parametro o cep do get */
@@ -43,8 +45,8 @@ try {
 
     $endereco = new Endereco($rua, $bairro, $cidade);
   }
-  echo json_encode($endereco);
 } 
 catch (Exception $e) {
   exit('Ocorreu uma falha: ' . $e->getMessage());
 }
+echo json_encode($endereco);
