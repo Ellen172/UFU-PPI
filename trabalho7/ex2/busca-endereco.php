@@ -3,19 +3,6 @@
 require "/home/www/ppi-12011bsi208-trabalho1.atwebpages.com/trabalho6/conexaoMysql.php";
 $pdo = mysqlConnect();
 
-try {
-
-  $sql = <<<SQL
-  SELECT cep, rua, bairro, cidade
-  FROM trab7_endereco
-  SQL;
-
-  $stmt = $pdo->query($sql);
-} 
-catch (Exception $e) {
-  exit('Ocorreu uma falha: ' . $e->getMessage());
-}
-
 class Endereco
 {  
   public $cep;
@@ -31,19 +18,33 @@ class Endereco
   }
 }
 
-while ($row = $stmt->fetch()) {
-  $cep = htmlspecialchars($row['cep']);
-  $rua = $row['rua'];
-  $bairro = $row['bairro'];
-  $cidade = $row['cidade'];
-
-  $endereco = new Endereco($rua, $bairro, $cidade);
-  $enderecos = array($cep => $endereco);
-} /* armazena apenas o ultimo endereço */
-
-$cep = $_GET['cep'] ?? '';
+try {
+/* busca rua, bairro, cidade 
+  da tabela endereço
+  onde cep = (o que for passado) */
+  $sql = <<<SQL
+  SELECT rua, bairro, cidade
+  FROM trab7_endereco
+  WHERE cep = ?
+  SQL;
   
-$endereco = array_key_exists($cep, $enderecos) ? 
-  $enderecos[$cep] : new Endereco('', '', '');
-  
-echo json_encode($endereco);
+  $cep = $_GET['cep'] ?? ''; // busca o cep (passado pela url no index)
+
+/* prepara e executa o codigo sql
+  passando como parametro o cep do get */
+  $stmt = $pdo->prepare($sql); 
+  $stmt->execute([$cep]); 
+
+  while ($row = $stmt->fetch()){ 
+  /* defini cada coluna */
+    $rua = $row['rua'];
+    $bairro = $row['bairro'];
+    $cidade = $row['cidade'];
+
+    $endereco = new Endereco($rua, $bairro, $cidade);
+  }
+  echo json_encode($endereco);
+} 
+catch (Exception $e) {
+  exit('Ocorreu uma falha: ' . $e->getMessage());
+}
