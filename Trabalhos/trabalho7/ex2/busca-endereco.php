@@ -1,6 +1,6 @@
 <?php
 
-require "/home/www/ppi-12011bsi208-trabalho1.atwebpages.com/trabalho6/conexaoMysql.php";
+require "/home/www/ppi-12011bsi208-trabalho1.atwebpages.com/conexaoMysql.php";
 $pdo = mysqlConnect();
 
 class Endereco
