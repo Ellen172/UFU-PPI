@@ -37,14 +37,14 @@ try {
   $stmt = $pdo->prepare($sql); 
   $stmt->execute([$cep]); 
 
-  while ($row = $stmt->fetch()){ 
+  $row = $stmt->fetch(); // busca a proxima linha da tabela
   /* defini cada coluna */
-    $rua = $row['rua'];
-    $bairro = $row['bairro'];
-    $cidade = $row['cidade'];
+  $rua = $row['rua'];
+  $bairro = $row['bairro'];
+  $cidade = $row['cidade'];
 
-    $endereco = new Endereco($rua, $bairro, $cidade);
-  }
+  $endereco = new Endereco($rua, $bairro, $cidade);
+
 } 
 catch (Exception $e) {
   exit('Ocorreu uma falha: ' . $e->getMessage());
