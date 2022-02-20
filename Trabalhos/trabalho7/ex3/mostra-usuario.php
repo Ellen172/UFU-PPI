@@ -77,7 +77,7 @@ catch (Exception $e) {
                 ?>
                 </tbody>
             </table>
-            <a href="index.html">Menu de opções</a>
+            <button class="btn btn-link"><a href="index.html">Voltar</a></button> 
         </main>
     </div>
 </body>

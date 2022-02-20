@@ -49,4 +49,3 @@ try {
 catch (Exception $e) {
   exit('Ocorreu uma falha: ' . $e->getMessage());
 }
-echo json_encode($endereco);
