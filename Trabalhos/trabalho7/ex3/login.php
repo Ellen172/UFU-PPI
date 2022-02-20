@@ -32,7 +32,9 @@ try {
   
   $success=password_verify($senha, $row['hash_senha']);
   
-  $response = new RequestResponse($success, "sucesso-login.html");  
+  $response = new RequestResponse($success, "home.html");  
+
+  echo json_encode($response);
 } 
 catch (Exception $e) {
   exit('Falha inesperada: ' . $e->getMessage());

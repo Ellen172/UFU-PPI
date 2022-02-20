@@ -71,7 +71,7 @@
           <input type="password" name="senha" class="form-control" id="senha">
         </div>
         <div class="col-sm-12 d-grid">
-          <button class="btn btn-primary btn-block" id="btnEntrar">Entrar</button>
+          <button type="button" class="btn btn-primary btn-block" id="btnEntrar">Entrar</button>
         </div>
       </form>
 
@@ -89,47 +89,60 @@
   <script>
 
     function validaForm() {
-        let meuForm = document.querySelector("form"); // localiza form
-        let formData = new FormData(meuForm); // cria FormData com form 
+      
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
 
-        let xhr = new XMLHttpRequest(); // cria objeto da requisição
-        xhr.open("POST", "login.php"); // inicializa requisição
+      console.log('FormData email: ' + email + ' senha: ' + senha); 
 
-        xhr.onload = function () {
-            // verifica o código de status retornado pelo servidor
-            if (xhr.status != 200) {
-            console.error("Falha inesperada: " + xhr.responseText);
-            return;
-            }
+      let meuForm = document.querySelector("form"); // localiza form
+      
+      // criar formData
+      let formData = new FormData(); 
+      formData.append('email', email);
+      formData.append('senha', senha);
 
-            // converte a string JSON para objeto JavaScript
-            try {
-                var response = JSON.parse(xhr.responseText);
-            }
-            catch (e) {
-                console.error("String JSON inválida: " + xhr.responseText);
-                return;
-            }
-            // defini o que será executado de acordo com response
-            if (response.success) // login ok
-                window.location = response.destination; //redineciona para home
-            else // falha no login
-                document.querySelector("#loginFailMsg").style.display = 'block'; //mostra msg de erro
-        }
+      let xhr = new XMLHttpRequest(); // cria objeto da requisição
+
+      const path = window.location.pathname; // url atual
+      const pathDirectoryArray = path.split('/', 3); // dividir url '/trabalho7/ex3/login.html'
+      const pathDirectory =`/${pathDirectoryArray[1]}/${pathDirectoryArray[2]}/`; // alterar url para  '/trabalho7/ex3'
+
+      xhr.open("POST", `${pathDirectory}login.php`, true); // inicializa requisição
+      xhr.send(formData); // envia requisição
+
+      xhr.onload = function () {
+          // verifica o código de status retornado pelo servidor
+          if (xhr.status != 200) {
+              console.error("Falha inesperada: " + xhr.responseText);
+              return;
+          }
+
+          // converte a string JSON para objeto JavaScript
+          try {
+              var response = JSON.parse(xhr.responseText);
+          }
+          catch (e) {
+              console.error("String JSON inválida: " + xhr.responseText);
+              return;
+          }
+          // defini o que será executado de acordo com response
+          if (response.success) // login ok
+              window.location = response.destination; //redineciona para home
+          else // falha no login
+              document.querySelector("#loginFailMsg").style.display = 'block'; //mostra msg de erro
+      }
+      
+      xhr.onerror = function () {
+          console.error("Erro de rede - requisição não finalizada");
+      };
+
         
-
-        xhr.onerror = function () {
-            console.error("Erro de rede - requisição não finalizada");
-        };
-
-        xhr.send(formData); // envia requisição
     }
 
     window.onload = function () {
-        const btnEntrar = document.querySelector("#btnEntrar");
-        btnEntrar.addEventListener("click", function () { // quando o botão da janela modal é clicado..
-                    validaForm(); // valida o form
-                });
+      const btnEntrar = document.querySelector("#btnEntrar");
+      btnEntrar.addEventListener("click", () => {validaForm()});
     }
 
   </script>
