@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao3</title>
+</head>
+<body>
+    <form>
+        <label for="id">ID</label>
+        <input type="text" name="id" id="id">
+        <label for="marca">Marca</label>
+        <input type="text" name="marca" id="marca">
+        <label for="modelo">Modelo</label>
+        <input type="text" name="modelo" id="modelo">
+        <label for="cor">Cor</label>
+        <input type="text" name="cor" id="cor">
+    </form>
+
+    <script>
+        
+        function busca_auto(id_auto){
+            let form = document.querySelector("form");
+
+            fetch('questao3.php?id='+id_auto)
+                .then(response => {
+                    if(!response.ok)
+                        throw new Error(response.status);
+                    return response.json();
+                })
+                .then(automovel => {
+                    // utiliza os dados para preencher o formulário
+                    form.marca.value = automovel.marca;
+                    form.modelo.value = automovel.modelo;
+                    form.cor.value = automovel.cor;
+                })
+                .catch(error => console.log('Falha: '+error))
+        }
+
+        window.onload = function () {
+            const inputId = document.getElementById("id");
+            inputId.onkeyup = () => busca_auto(inputId.value);
+        }
+    </script>
+</body>
+</html>
